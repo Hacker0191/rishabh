@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Solitreo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Sacramento' rel='stylesheet'>
+</head>
+<body>
+    <div class="preloader-container">
+        <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px">
+        <defs>
+            <linearGradient id="pl-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#000" />
+                <stop offset="100%" stop-color="#fff" />
+            </linearGradient>
+            <mask id="pl-mask">
+                <rect x="0" y="0" width="128" height="128" fill="url(#pl-grad)" />
+            </mask>
+        </defs>
+        <g stroke-linecap="round" stroke-width="8" stroke-dasharray="32 32">
+            <g stroke="hsl(193,90%,50%)">
+                <line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
+                <line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
+                <line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
+                <line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
+                <line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
+                <g transform="rotate(180,79,64)">
+                    <line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
+                </g>
+                <g transform="rotate(180,94,64)">
+                    <line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
+                </g>
+                <g transform="rotate(180,109,64)">
+                    <line class="pl__line8" x1="109" y1="48" x2="109" y2="80" />
+                </g>
+                <g transform="rotate(180,124,64)">
+                    <line class="pl__line9" x1="124" y1="48" x2="124" y2="80" />
+                </g>
+            </g>
+            <g stroke="hsl(283,90%,50%)" mask="url(#pl-mask)">
+                <line class="pl__line1" x1="4" y1="48" x2="4" y2="80" />
+                <line class="pl__line2" x1="19" y1="48" x2="19" y2="80" />
+                <line class="pl__line3" x1="34" y1="48" x2="34" y2="80" />
+                <line class="pl__line4" x1="49" y1="48" x2="49" y2="80" />
+                <line class="pl__line5" x1="64" y1="48" x2="64" y2="80" />
+                <g transform="rotate(180,79,64)">
+                    <line class="pl__line6" x1="79" y1="48" x2="79" y2="80" />
+                </g>
+                <g transform="rotate(180,94,64)">
+                    <line class="pl__line7" x1="94" y1="48" x2="94" y2="80" />
+                </g>
+                <g transform="rotate(180,109,64)">
+                    <line class="pl__line8" x1="109" y1="48" x2="109" y2="80" />
+                </g>
+                <g transform="rotate(180,124,64)">
+                    <line class="pl__line9" x1="124" y1="48" x2="124" y2="80" />
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+<video class="video-background" autoplay loop muted>
+    <!-- Provide the path to your video file -->
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="welcome-section">
+
+
+ 
+
+
+    <h1 style="font-size: 12em; margin-bottom: 50px;font-family: 'Sacramento'; font-weight: lighter; background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); -webkit-background-clip: text; color: transparent; animation: rainbowAnimation 2s infinite linear;">Hey, Rishabh</h1>
+   
+   <!-- HTML !-->
+<button class="button-49" role="button"  id="playButton" onclick="enterWebsite()">Enter</button>
+
+ 
+</div>
+  
+
+<div class="main-content" id="mainContent">
+  
+    <img class="gif-background" src="thans.gif" alt="GIF background">
+
+<div class="container">
+   
+  <div class="envelope"></div>
+  <div class="card">
+    <h1 class="message">You're the best <br>classmate I could <br>ever have. Thanks <br>for sticking by me.</h1>
+    <div class="heart"></div>
+  </div>
+  <div class="cover"></div>
+  <div class="lid"></div>
+  <div class="shadow"></div>
+</div>
+   
+
+</div>
+
+<audio id="backgroundAudio" loop>
+    <source src="song.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('backgroundAudio');
+        var playButton = document.getElementById('playButton');
+
+        if (audio && playButton) {
+            playButton.addEventListener('click', function() {
+                audio.play().catch(function(error) {
+                    // Autoplay was prevented, handle the error
+                    console.error(error);
+                });
+            });
+        }
+    });
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the preloader container and main content elements by class name
+        var preloaderContainer = document.querySelector('.preloader-container');
+        var mainContent = document.querySelector('.main-content');
+    
+        // Function to hide the preloader and show the main content
+        function hidePreloader() {
+            preloaderContainer.style.display = 'none';
+            mainContent.style.visibility = 'visible';
+        }
+    
+        // Set a timeout to hide the preloader after 3 seconds (3000 milliseconds)
+        setTimeout(hidePreloader, 3000);
+    });
+    </script>
+
+
+<script>
+    function enterWebsite() {
+        // Disable the button to prevent multiple clicks during the delay
+        var button = document.querySelector('button');
+        button.disabled = true;
+
+        // Set a 1-second delay before hiding the welcome section and showing the main content
+        setTimeout(function() {
+            // Hide the welcome section
+            var welcomeSection = document.querySelector('.welcome-section');
+            welcomeSection.style.display = 'none';
+
+            // Show the main content section
+            var mainContent = document.getElementById('mainContent');
+            mainContent.style.display = 'block';
+
+            // Enable the button again
+            button.disabled = false;
+        }, 800); // 1000 milliseconds = 1 second
+    }
+</script>
+</body>
+</html>
